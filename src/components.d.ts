@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface Lm1234AmbulanceWlApp {
+        "ambulanceId": string;
+        "apiBase": string;
         /**
           * @default ""
          */
@@ -16,6 +18,8 @@ export namespace Components {
         "entryId": string;
     }
     interface Lm1234AmbulanceWlList {
+        "ambulanceId": string;
+        "apiBase": string;
     }
     interface MyComponent {
         /**
@@ -96,6 +100,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface Lm1234AmbulanceWlApp {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         /**
           * @default ""
          */
@@ -106,6 +112,8 @@ declare namespace LocalJSX {
         "onEditor-closed"?: (event: Lm1234AmbulanceWlEditorCustomEvent<string>) => void;
     }
     interface Lm1234AmbulanceWlList {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "onEntry-clicked"?: (event: Lm1234AmbulanceWlListCustomEvent<string>) => void;
     }
     interface MyComponent {
@@ -125,9 +133,15 @@ declare namespace LocalJSX {
 
     interface Lm1234AmbulanceWlAppAttributes {
         "basePath": string;
+        "apiBase": string;
+        "ambulanceId": string;
     }
     interface Lm1234AmbulanceWlEditorAttributes {
         "entryId": string;
+    }
+    interface Lm1234AmbulanceWlListAttributes {
+        "apiBase": string;
+        "ambulanceId": string;
     }
     interface MyComponentAttributes {
         "first": string;
@@ -138,7 +152,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "lm1234-ambulance-wl-app": Omit<Lm1234AmbulanceWlApp, keyof Lm1234AmbulanceWlAppAttributes> & { [K in keyof Lm1234AmbulanceWlApp & keyof Lm1234AmbulanceWlAppAttributes]?: Lm1234AmbulanceWlApp[K] } & { [K in keyof Lm1234AmbulanceWlApp & keyof Lm1234AmbulanceWlAppAttributes as `attr:${K}`]?: Lm1234AmbulanceWlAppAttributes[K] } & { [K in keyof Lm1234AmbulanceWlApp & keyof Lm1234AmbulanceWlAppAttributes as `prop:${K}`]?: Lm1234AmbulanceWlApp[K] };
         "lm1234-ambulance-wl-editor": Omit<Lm1234AmbulanceWlEditor, keyof Lm1234AmbulanceWlEditorAttributes> & { [K in keyof Lm1234AmbulanceWlEditor & keyof Lm1234AmbulanceWlEditorAttributes]?: Lm1234AmbulanceWlEditor[K] } & { [K in keyof Lm1234AmbulanceWlEditor & keyof Lm1234AmbulanceWlEditorAttributes as `attr:${K}`]?: Lm1234AmbulanceWlEditorAttributes[K] } & { [K in keyof Lm1234AmbulanceWlEditor & keyof Lm1234AmbulanceWlEditorAttributes as `prop:${K}`]?: Lm1234AmbulanceWlEditor[K] };
-        "lm1234-ambulance-wl-list": Lm1234AmbulanceWlList;
+        "lm1234-ambulance-wl-list": Omit<Lm1234AmbulanceWlList, keyof Lm1234AmbulanceWlListAttributes> & { [K in keyof Lm1234AmbulanceWlList & keyof Lm1234AmbulanceWlListAttributes]?: Lm1234AmbulanceWlList[K] } & { [K in keyof Lm1234AmbulanceWlList & keyof Lm1234AmbulanceWlListAttributes as `attr:${K}`]?: Lm1234AmbulanceWlListAttributes[K] } & { [K in keyof Lm1234AmbulanceWlList & keyof Lm1234AmbulanceWlListAttributes as `prop:${K}`]?: Lm1234AmbulanceWlList[K] };
         "my-component": Omit<MyComponent, keyof MyComponentAttributes> & { [K in keyof MyComponent & keyof MyComponentAttributes]?: MyComponent[K] } & { [K in keyof MyComponent & keyof MyComponentAttributes as `attr:${K}`]?: MyComponentAttributes[K] } & { [K in keyof MyComponent & keyof MyComponentAttributes as `prop:${K}`]?: MyComponent[K] };
     }
 }
