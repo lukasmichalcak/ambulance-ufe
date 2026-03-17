@@ -37,6 +37,7 @@ export class Lm1234AmbulanceWlApp {
   }
 
   render() {
+    console.debug("lm1234-ambulance-wl-app.render() - path: %s", this.relativePath);
     let element = "list"
     let entryId = "@new"
 
